@@ -1,0 +1,9 @@
+.admin-page-user-list-item{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.admin-page-user-list{
+   margin-top: 10vh;
+}

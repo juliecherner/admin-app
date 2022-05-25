@@ -1,0 +1,7 @@
+.login-page-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto ;
+    align-items: center;
+    gap: 2rem;
+}
