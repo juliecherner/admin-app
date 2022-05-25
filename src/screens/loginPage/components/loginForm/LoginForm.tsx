@@ -78,7 +78,9 @@ export const LoginForm = () => {
         onChange={(event) => addFields(event)}
         value={admin.password}
       />
-      <button type="submit">{admin.logged ? "Logout" : "Login"}</button>
+      <button type="submit" className="login-page-from--button">
+        {admin.logged ? "Logout" : "Login"}
+      </button>
     </form>
   );
 };

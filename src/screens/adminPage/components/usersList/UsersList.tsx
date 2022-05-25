@@ -18,7 +18,6 @@ export const UsersList = () => {
   const getAllUsers = async () => {
     try {
       const allUsers = await getAllUsersByAdminId();
-      console.log(allUsers, "all us");
       setUsers(allUsers);
     } catch (error: any) {
       setAndClearResponse({ text: error.message, severity: "error" });
@@ -44,18 +43,21 @@ export const UsersList = () => {
 
   return (
     <div className="admin-page-user-list">
-      <div>Hi, {admin.name}</div>
-      <div>Your current users</div>
-      <div>Amount: {users.length}</div>
-      {users.map((user: User) => (
-        <div className="admin-page-user-list-item" key={user.id}>
-          <div>{user.name}</div>
-          <CloseIcon color="error" onClick={() => deleteById(user.id)} />
-          <Button variant="contained">
-            <Link to={"/user/" + user.id}>Open</Link>
-          </Button>
-        </div>
-      ))}
+      <div className="admin-page-user-list-admin-info">
+        <div>Hi, {admin.name}</div>
+        <div>Users amount: {users.length}</div>
+      </div>
+      <div>
+        {users.map((user: User) => (
+          <div className="admin-page-user-list-item" key={user.id}>
+            <div>{user.name}</div>
+            <CloseIcon color="error" onClick={() => deleteById(user.id)} />
+            <Button variant="contained">
+              <Link to={"/user/" + user.id}>Open</Link>
+            </Button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

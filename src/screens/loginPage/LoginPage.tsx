@@ -8,10 +8,10 @@ export const LoginPage = () => {
   const { admin } = useContext(AdminContext);
 
   return (
-    <div>
+    <div className="login-page">
       <LoginForm />
       {admin.logged && (
-        <div className="login-page--link">
+        <div className="login-page--link link">
           <Link to="/admin">To admin page</Link>
         </div>
       )}

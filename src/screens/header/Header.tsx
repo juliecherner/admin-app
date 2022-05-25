@@ -11,7 +11,9 @@ export const Header = () => {
     <div className="header">
       {headerConstants.map((header) => (
         <div key={header.title}>
-          <Link to={header.path} className="header--item">{header.title}</Link>
+          <Link to={header.path} className="header--item">
+            {header.title}
+          </Link>
         </div>
       ))}
     </div>

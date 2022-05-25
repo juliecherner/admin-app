@@ -50,6 +50,16 @@ export const addUser = async (name: string) => {
   }
 };
 
+export const getUser = async (id: string): Promise<User> => {
+  try {
+    const { data } = await api.get("/api/users/" + id, authHeader());
+    return data;
+  } catch (error: any) {
+    const customError = error.response.data;
+    throw new Error(customError);
+  }
+};
+
 export const getLocalAdminData = () => {
   const admin = localStorage.getItem("admin");
   if (admin) {

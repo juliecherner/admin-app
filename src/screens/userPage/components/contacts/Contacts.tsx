@@ -1,3 +1,7 @@
-export const Contacts = () => {
-  return <div>contacts</div>;
+type Props = {
+  userId: string | undefined;
+};
+
+export const Contacts = ({ userId }: Props) => {
+  return <div>contacts, {userId}</div>;
 };

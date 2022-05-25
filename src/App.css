@@ -1,10 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link{
+    margin: 5vh 35%;
+    font-weight: bold;
+    color: green;
+    border: 2px solid green;
+    border-radius: 25px;
+    padding: 2vh;
+}
+
+.new-item {
+  margin: 5vh 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {

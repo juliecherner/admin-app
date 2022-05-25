@@ -7,7 +7,7 @@ export const AdminPage = () => {
     <div>
       <UsersList />
       <NewUser />
-      <div>
+      <div className="admin-page--link link">
         <Link to="/">Return to login page</Link>
       </div>
     </div>

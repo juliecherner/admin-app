@@ -37,3 +37,9 @@ export type Response = {
   text: string;
   severity: "error" | "success" | "";
 };
+
+export type Content = {
+  todos: boolean;
+  table: boolean;
+  contacts: boolean;
+};

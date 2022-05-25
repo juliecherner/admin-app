@@ -9,9 +9,10 @@ import { Todo } from "../../../../types";
 import CloseIcon from "@mui/icons-material/Close";
 import AddTaskIcon from "@mui/icons-material/AddTask";
 import TextField from "@mui/material/TextField";
+import "./todos.css";
 
 type Props = {
-  userId: string | undefined | null;
+  userId: string | undefined;
 };
 
 export const Todos = ({ userId }: Props) => {
@@ -20,7 +21,7 @@ export const Todos = ({ userId }: Props) => {
   const { setAndClearResponse } = useContext(ResponseContext);
 
   const getAllTodos = async () => {
-    if (userId === null || userId === undefined) return;
+    if (userId === undefined) return;
     try {
       const allTodos = await allUserTodos(parseInt(userId));
       setTodos(allTodos);
@@ -73,36 +74,38 @@ export const Todos = ({ userId }: Props) => {
 
   return (
     <div>
-      Todos list
       <div>
-        {todos.length < 1 && <div>The user does not have todos</div>}
+        <div className="user-page-todos-info">
+          <div>Todos of the user</div>
+          {todos.length < 1 && <div>The user does not have todos</div>}
+        </div>
+
         {todos.map((todo: Todo) => (
-          <div key={todo.id}>
+          <div className="user-page-todo-item" key={todo.id}>
             <div>{todo?.name}</div>
             <div>{todo?.created_at?.toString().slice(0, 10)}</div>
             <CloseIcon color="error" onClick={() => deleteTodo(todo.id)} />
           </div>
         ))}
       </div>
-      <div>
-        <form
-          onSubmit={(event: React.SyntheticEvent<Element, Event>) =>
-            event.preventDefault()
+      <form
+        className="user-page-todos new-item"
+        onSubmit={(event: React.SyntheticEvent<Element, Event>) =>
+          event.preventDefault()
+        }
+      >
+        <TextField
+          type="text"
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setNewTodo(event.target.value)
           }
-        >
-          <TextField
-            type="text"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-              setNewTodo(event.target.value)
-            }
-            value={newTodo}
-            placeholder="Add new todo"
-          />
-        </form>
+          value={newTodo}
+          placeholder="Add new todo"
+        />
         <div>
           <AddTaskIcon color="success" onClick={addNewTodo} />
         </div>
-      </div>
+      </form>
     </div>
   );
 };

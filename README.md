@@ -16,7 +16,5 @@ The project represents a simple admin panel that can manage the users, add and d
 
 ## Storing data in browser
 
-- local storage
-  Name of admin, hidden password (in format \*\*\*\*)
-- cookies
-  JSON Web Token
+- local storage : name of admin, hidden password (in format \*\*\*\*)
+- cookies : JSON Web Token

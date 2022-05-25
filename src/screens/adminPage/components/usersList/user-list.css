@@ -1,9 +1,24 @@
-.admin-page-user-list-item{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+.admin-page-user-list{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5vh;
 }
 
-.admin-page-user-list{
-   margin-top: 10vh;
+.admin-page-user-list-admin-info{
+    font-weight: bold;
+    padding: 0vh 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh
+
 }
+
+.admin-page-user-list-item{
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr;
+    align-items: center;
+    padding: 0.5vh;
+    text-align: left;
+}
+

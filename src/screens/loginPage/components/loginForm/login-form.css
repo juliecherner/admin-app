@@ -1,7 +1,17 @@
 .login-page-form {
     display: flex;
     flex-direction: column;
-    margin: 10vh auto ;
+    margin: 5vh auto ;
     align-items: center;
     gap: 2rem;
+}
+
+.login-page-from--button{
+    background-color: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid green;
+    border-radius: 5px;
 }

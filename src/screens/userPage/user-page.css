@@ -1,0 +1,17 @@
+.user-page {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.user-page-menu {
+    margin-top: 5vh;
+}
+
+.user-page-menu-title{
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    text-align: left;
+    font-weight: bold;
+    color: green;
+}

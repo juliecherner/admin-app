@@ -4,6 +4,7 @@ import { ResponseContext } from "../../../../context/response.context";
 import { UsersContext } from "../../../../context/users.context";
 import AddTaskIcon from "@mui/icons-material/AddTask";
 import TextField from "@mui/material/TextField";
+import "./new-user.css";
 
 export const NewUser = () => {
   const [newUserName, setNewUserName] = useState<string>("");
@@ -33,24 +34,23 @@ export const NewUser = () => {
   };
 
   return (
-    <div>
-      <form
-        onSubmit={(event: React.SyntheticEvent<Element, Event>) => {
-          event.preventDefault();
-        }}
-      >
-        <TextField
-          id="outlined-basic"
-          label="User's name"
-          variant="outlined"
-          type="text"
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            setNewUserName(event.target.value)
-          }
-          value={newUserName}
-        />
-        <AddTaskIcon color="success" onClick={addNewUser} />
-      </form>
-    </div>
+    <form
+      className="admin-page-new-user new-item"
+      onSubmit={(event: React.SyntheticEvent<Element, Event>) => {
+        event.preventDefault();
+      }}
+    >
+      <TextField
+        id="outlined-basic"
+        label="User's name"
+        variant="outlined"
+        type="text"
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+          setNewUserName(event.target.value)
+        }
+        value={newUserName}
+      />
+      <AddTaskIcon color="success" onClick={addNewUser} />
+    </form>
   );
 };

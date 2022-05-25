@@ -4,6 +4,7 @@ import AdminProvider from "./providers/admin.provider";
 import UsersProvider from "./providers/users.provider";
 import ResponseProvider from "./providers/response.provider";
 import "./index.css";
+import "./normalize.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
