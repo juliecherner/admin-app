@@ -1,0 +1,18 @@
+.user-page-table-column{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-page-table-column-title{
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+.user-page-table-column-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
