@@ -30,7 +30,7 @@ export const addTableQuality = async (
   }
 };
 
-export const deleteTableQualityById = async (todoId: string) => {
+export const deleteTableQualityById = async (todoId: number) => {
   try {
     const { data } = await api.delete("/api/table/" + todoId, authHeader());
     return data;

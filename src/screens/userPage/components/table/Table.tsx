@@ -3,6 +3,7 @@ import { ResponseContext } from "../../../../context/response.context";
 import { TableQuality } from "../../../../types";
 import { allUserTableQualities } from "../../../../api/table.api";
 import { TableColumn } from "./components/tableColumn/TableColumn";
+import { NewTableQuality } from "./components/newTableQuality/NewTableQuality";
 import "./table.css";
 
 type Props = {
@@ -42,6 +43,7 @@ export const Table = ({ userId }: Props) => {
           <TableColumn title="cons" qualities={displayQualities("cons")} />
         </div>
       )}
+      <NewTableQuality />
     </div>
   );
 };

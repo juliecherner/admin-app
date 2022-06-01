@@ -71,7 +71,7 @@ export const UserPage = () => {
         >
           <div className="user-page-menu-title">
             <KeyboardArrowDownIcon />
-            <div>Table</div>
+            <div>Pros and cons</div>
           </div>
         </div>
         {showContent.table && <Table userId={id} />}
