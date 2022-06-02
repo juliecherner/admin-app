@@ -11,9 +11,9 @@ export type AuthHeader = {
 };
 
 export type Contact = {
-  id?: number;
+  id: number;
   name: string;
-  number: number;
+  number: number | null;
 };
 
 export type TableQuality = {

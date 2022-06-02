@@ -43,7 +43,7 @@ export const Table = ({ userId }: Props) => {
           <TableColumn title="cons" qualities={displayQualities("cons")} />
         </div>
       )}
-      <NewTableQuality />
+      <NewTableQuality userId={userId} />
     </div>
   );
 };

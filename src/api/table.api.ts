@@ -12,11 +12,11 @@ export const allUserTableQualities = async (userId: number) => {
 };
 
 export const addTableQuality = async (
-  name: string,
+  text: string,
   type: string,
-  userId: string
+  userId: number
 ) => {
-  const newTableQuality = { name, userId, type };
+  const newTableQuality = { text, type, userId };
   try {
     const { data } = await api.post(
       "/api/table",
