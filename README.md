@@ -21,13 +21,6 @@ The project represents a simple admin panel that can manage the users, add and d
 - local storage : name of admin, hidden password (in format \*\*\*\*)
 - cookies : JSON Web Token
 
-# init
-
-```sh
-cp .env.default .env
-docker-compose up -d
-```
-
 ## Backend
 
 - authencitate all routes with token
@@ -50,14 +43,13 @@ docker-compose up -d
 **Create migration**
 
 ```sh
-npm run typeorm migration:create ./src/migrations/<migrationName>
+cd server
+npm run typeorm migration:create .server/src/migrations/<migrationName>
 ```
 
 ## Run
 
-Have preintalled Docker and Docker Compose
-
-UP Postgres
+Have pre installed npm, Docker, Docker Compose
 
 ```
 bash up-dev.sh
